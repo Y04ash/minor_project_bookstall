@@ -1,0 +1,82 @@
+
+.form-container input  {
+    width: 90%; /* Make the input take full width of the container */
+    position: relative;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    
+  }
+  .form-control:focus{
+    border: 2px solid rgb(151, 43, 13)
+  }
+  .form-control{
+    box-shadow: 0px 0px 7px 0.5px grey;
+  }
+  .container{
+    background-color: #EFDA92;
+    margin: 0;
+  }
+  .form_heading{
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .form_heading h1{
+    margin: 0.5rem 0;
+  }
+  .form-container {
+    padding: 20px;
+    width: 90%; /* Set form width */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+.twin_input{
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+.input_field{
+  width: 50%;
+  position: relative;
+  text-align: left;
+}
+.input_field h1{
+  font-size: 1.8rem;
+}
+.input_field textarea{
+  width: 90%;
+  position: relative;
+}
+/* .twin_input:nth-child(1){
+  width: 50%;
+}
+.twin_input:nth-child(2){
+  width: 50%;
+} */
+  /* Add style for the submit button */
+  .submit-btn {
+    background-color: #431801cf; /* Dark brown background color */
+    color: white; /* White text */
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 90%; 
+    transform: translate(0, 20%);
+    height: 80%;
+  }
+  
+  .submit-btn:hover {
+    opacity: 0.9; /* Slight hover effect */
+  }
+  .heading{
+    margin: 0;
+    margin-top: 20px;
+    color:#692805;
+  }

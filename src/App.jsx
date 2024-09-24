@@ -4,6 +4,7 @@ import Campaign from "./pages/Campaign";
 import Report from "./pages/Report";
 import {Route, Routes} from "react-router-dom"
 import Footer from "./Components/Footer";
+import Form from './Pages/Form'
 function App() {
 
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path = "/" element = {<Home />} />
       <Route path = "/Campaign" element = {<Campaign />} />
       <Route path = "/Report" element = {<Report />} />   
+      <Route path="/Add-campaign" element={<Form/>}/>
     </Routes>
   </div>
   <Footer/>
