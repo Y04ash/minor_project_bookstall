@@ -5,32 +5,32 @@ const Campaign = () => {
     {
       camp_title: "Campaign 1",
       occasion: "Chembur Fest",
-      address: "Gandhi Maidan",
-      data: "20/02/2023",
+      address: "Gandhi Maidan, near Chembur station road",
+      date: "20/02/2023",
     },
     {
       camp_title: "Campaign 1",
       occasion: "Chembur Fest",
-      address: "Gandhi Maidan",
-      data: "20/02/2023",
+      address: "Gandhi Maidan, near Chembur station road",
+      date: "20/02/2023",
     },
     {
       camp_title: "Campaign 1",
       occasion: "Chembur Fest",
-      address: "Gandhi Maidan",
-      data: "20/02/2023",
+      address: "Gandhi Maidan, near Chembur station road",
+      date: "20/02/2023",
     },
     {
       camp_title: "Campaign 1",
       occasion: "Chembur Fest",
-      address: "Gandhi Maidan",
-      data: "20/02/2023",
+      address: "Gandhi Maidan, near Chembur station road",
+      date: "20/02/2023",
     },
     {
       camp_title: "Campaign 1",
       occasion: "Chembur Fest",
-      address: "Gandhi Maidan",
-      data: "20/02/2023",
+      address: "Gandhi Maidan, near Chembur station road",
+      date: "20/02/2023",
     },
   ];
   return (
@@ -46,12 +46,17 @@ const Campaign = () => {
           return (
             <div className="camp_post">
               <div className="camp_title">
-                <h3>{camp.camp_title}</h3>
+                <h3>{camp.occasion}</h3>
               </div>
               <div className="camp_body">
-                <p className="occasion">Occasion:{camp.occasion}</p>
-                <p className="address">Address: {camp.address}</p>
-                <p className="camp_date">Date: {camp.camp_title}</p>
+                <ul> 
+                  <li className="occasion">Occasion:{camp.occasion}</li>
+                  <li className="address">Address: {camp.address}</li>
+                  <li className="camp_date">Date: {camp.date}</li>
+                </ul>
+              <button className="read_more">
+                Read More
+              </button>
               </div>
             </div>
           );
