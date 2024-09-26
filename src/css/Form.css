@@ -1,4 +1,6 @@
-
+.general_details{
+  width: 100%;
+}
 .form-container input  {
     width: 90%; /* Make the input take full width of the container */
     position: relative;
@@ -59,7 +61,7 @@
   width: 50%;
 } */
   /* Add style for the submit button */
-  .submit-btn {
+  .submit-btn,.final-submit-btn {
     background-color: #431801cf; /* Dark brown background color */
     color: white; /* White text */
     padding: 10px 20px;
@@ -79,4 +81,19 @@
     margin: 0;
     margin-top: 20px;
     color:#692805;
+  }
+  .back_btn{
+    position: absolute;
+    left: 5%;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .input_field p{
+    height: auto;
+    width: 80%;
+    background: beige;
+    padding: 0.4rem;
+  }
+  .final-submit-btn{
+    
   }

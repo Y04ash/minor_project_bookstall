@@ -1,7 +1,7 @@
 import Navbar from "./Components/Navbar";
-import Home from "./pages/Home";
-import Campaign from "./pages/Campaign";
-import Report from "./pages/Report";
+import Home from "./Pages/Home";
+import Campaign from "./Pages/Campaign";
+import Report from "./Pages/Report";
 import {Route, Routes} from "react-router-dom"
 import Footer from "./Components/Footer";
 import Form from './Pages/Form'
