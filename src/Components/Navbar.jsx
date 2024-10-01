@@ -1,8 +1,10 @@
 import React from "react";
 import "../css/styles.css";
+
+
 const Navbar = () => {
   return (
-    <div className="nav_outer">
+    // <div className="nav_outer">
       <nav className="nav">
         <div className="logo_title">
           <div className="logo"></div>
@@ -22,7 +24,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-    </div>
+    // </div>
   );
 };
 

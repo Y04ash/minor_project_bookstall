@@ -1,3 +1,4 @@
+/* 
 .App {
     text-align: center;
   }
@@ -36,19 +37,52 @@
       transform: rotate(360deg);
     }
   }
-  
+   */
   *{
     box-sizing: border-box;
-    
+    margin: 0;
+    }
+
+    .lato-bold {
+      font-family: "Lato", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+    .lato-regular {
+      font-family: "Lato", sans-serif;
+      font-weight: 100;
+      font-style: normal;
+    }
+
+    .raleway {
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 100;
+      font-style: normal;
     }
     
+    html{
+      height: 100%;
+    }
     body{
         margin: 0;
+        height: 100%;
+        background-image: url('./images/home_library.jpeg');
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+        
     }
     
     .container{
-        /* margin: 1rem; */
+      background-color:#fef3c7;
+        margin: 0;
         text-align: center;
+        height: 100%;
+        width: 100%;
+
+        
     }
     .nav{
         background-color: #EFDA92;

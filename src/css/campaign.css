@@ -1,8 +1,9 @@
 .campaign_section{
-    padding-top: 1rem;
+    padding-top: 4rem;
     width: 100%;
 }
 .search_section{
+    padding-bottom: 2rem;
     width: 100%;
     position: relative;
 }
@@ -20,7 +21,7 @@
 
 
 .campaign_title{
-    width: 100%;
+    margin: 1rem ;
     font-size: 3rem;
     text-align: center;
 }
@@ -37,13 +38,14 @@
 }
 .camp_post{
     flex: 1 1 30%;
+    text-decoration: none;
     max-width: 28%;
     position: relative;
     width: -9rem;
     height: 20rem;
-    background-color: #764128;
+    background-color: #ffffff;
     border-radius: 5px;
-    box-shadow: 0 0 9px 0px black;
+    box-shadow: 0 0 5px -1px #5e5e5e
 }
 .camp_title{
     position: relative;
@@ -52,8 +54,8 @@
 
 }
 .camp_title h3{
-    border-bottom: 3px solid beige;
-    color: beige;
+    border-bottom: 3px solid #ffbb00;
+    color: #ffbb00;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
@@ -68,7 +70,8 @@
 .camp_body ul{
     width: 90%;
     padding-left: 0;
-    color: #e0e4e1;
+    padding-left: 0;
+    color: #4c4c4c
 }
 .occasion,
 .address,
@@ -80,11 +83,17 @@
 }
 
 .read_more{
-    background: #f3e1cc;
+    background: #ffbb00;
     border: none;
     /* outline: none; */
     border-radius: 5px;
     width: 70%;
-    height: 2rem;
+    height: 2.3rem;
     margin-top: 1.8rem;
+}
+.read_more a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.2rem;
 }

@@ -1,34 +1,33 @@
-import React from 'react'
-import '../css/home.css'
+import React from "react";
+import "../css/home.css";
 import { MdCampaign } from "react-icons/md";
-import AddCampaignButton from '../Components/AddCampaignButton';
+import AddCampaignButton from "../Components/AddCampaignButton";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 const Home = () => {
-    const campaign=[{
-        Location:"Shivaji Park, Dadar",
-        Seller: "Shreya",
-        Total_books:"20"
+  const campaign = [
+    {
+      title:"Campaign Title",
+      Location: "Shivaji Park, Dadar",
+      occasion: "Books Fair",
+      books_sold: "20",
     },
     {
-        Location:"Shivaji Park, Dadar",
-        Seller: "Shreya",
-        Total_books:"20"
+      title:"Campaign Title",
+      Location: "Shivaji Park, Dadar",
+      occasion: "Books Fair",
+      books_sold: "20",
     },
     {
-        Location:"Shivaji Park, Dadar",
-        Seller: "Shreya",
-        Total_books:"20"
+      title:"Campaign Title",
+      Location: "Shivaji Park, Dadar",
+      occasion: "Books Fair",
+      books_sold: "20",
     },
-    {
-        Location:"Shivaji Park, Dadar",
-        Seller: "Shreya",
-        Total_books:"20"
-    },
-   
-]
-var settings = {
+
+  ];
+  var settings = {
     dots: true,
     infinite: false,
     speed: 500,
@@ -38,42 +37,40 @@ var settings = {
 
   return (
     <section className="home" id="home">
-        <div className="home_title">
-        <h1>Welcome to BookStockPro!</h1>
-        <p>With our advanced features, you can effortlessly connect with inventory management experts, optimize stock levels, and generate insightful reports to drive your book sales success.</p>
-        </div>
-        <div className="home_campaign_wrapper">
-            <h1 className="recent_camp_title">
-                Recent Campaign
-            </h1>
-        <Slider {...settings}>
-        
+      <div className="home_title">
+        <h1 className="home_title_h1">
+          Welcome to <span className="bookstock">BookStockPro!</span> <br />{" "}
+          Your bookstore, Your way! Managed perfectly!
+        </h1>
+      </div>
+      {/* <div className="home_campaign_wrapper"> */}
 
-            {
-                campaign.map((camp)=>{
-                    return(
-                    <div className="latest_campaign">
-                    <p>Location: {camp.Location}</p>
-                    <p>Book Seller: {camp.Seller}</p>
-                    <p>Total Books: {camp.Total_books}</p>
-                    <button className="repo_btn">Report</button>
-                </div>)
-                })
-            }
-            </Slider>
+      <h1 className="latest_campaign_title">Recent Campaigns</h1>
+      <div className="campaign_cover">
+        {/* <Slider {...settings}> */}
+        {campaign.map((camp) => {
+          return (
+            <div className="latest_campaign">
+              <p>{camp.title}</p>
+              <p>Location: {camp.Location}</p>
+              <p>Occasion: {camp.occasion}</p>
+              <p>Books Sold: {camp.books_sold}</p>
+              <button className="repo_btn">Report</button>
+            </div>
+          );
+        })}
+        {/* </Slider> */}
+      </div>
+      {/* </div> */}
 
-  
-        </div>
-        
-        <div className="add_campaign_wrapper">
-            <h1>
-            Easily create and manage campaigns to boost your book sales and track their performance all in one place.
-            </h1>
-            <AddCampaignButton />
-            
-        </div>
+      <div className="add_campaign_wrapper">
+        <h1 className="add_campaign_title">Start your new campaign now</h1>
+        <p className="add_campaign_para">Want to start your latest idea? Start building a campaign tailored to your goals. Click the 'Add Campaign' button to get started.</p>
+
+        <AddCampaignButton />
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

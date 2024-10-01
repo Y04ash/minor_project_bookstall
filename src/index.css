@@ -10,6 +10,7 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    height: 100%;
   }
   
   code {
@@ -21,15 +22,8 @@ body {
     box-sizing: border-box;
     
     }
-    
-    body{
-        margin: 0;
-    }
-    
-    .container{
-        /* margin: 1rem; */
-        text-align: center;
-    }
+
+ 
     .nav{
         background-color: #EFDA92;
         color: black;
