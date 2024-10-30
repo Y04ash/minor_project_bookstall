@@ -58,7 +58,7 @@ app.post('/Add-campaign', async(req,res)=>{
         
         const newCamp = new campaignTable(camp)
         await newCamp.save();
-        res.json({ message: 'Inventory updated successfully' });
+        res.json({ message: 'Inventory updated successfully' ,status:"ok"});
 
 
     } catch(error){
