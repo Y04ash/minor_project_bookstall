@@ -142,11 +142,8 @@ const BooksForm = ({ formData, setFormData, isBooksForm, setIsBooksForm, data })
         },
         body: JSON.stringify(newCamp),
       });
-      if(response.status==='ok')
-      {
-
-        setIsSubmitClicked(true);
-      }
+      
+      setIsSubmitClicked(true);
       
     } catch (error) {
       console.log("Error occurred while submitting:", error);
