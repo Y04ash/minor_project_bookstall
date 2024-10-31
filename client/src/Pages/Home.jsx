@@ -1,39 +1,38 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import "../css/home.css";
 import { MdCampaign } from "react-icons/md";
 import AddCampaignButton from "../Components/AddCampaignButton";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom';
 const Home = () => {
-  const campaign = [
-    {
-      title:"Campaign Title",
-      Location: "Shivaji Park, Dadar",
-      occasion: "Books Fair",
-      books_sold: "20",
-    },
-    {
-      title:"Campaign Title",
-      Location: "Shivaji Park, Dadar",
-      occasion: "Books Fair",
-      books_sold: "20",
-    },
-    {
-      title:"Campaign Title",
-      Location: "Shivaji Park, Dadar",
-      occasion: "Books Fair",
-      books_sold: "20",
-    },
+  const [recentCamps, setRecentCamps] = useState([])
+  useState(()=>{
+    const recent= async ()=>{
+      try {
+        const response = await fetch('http://localhost:5000/', {method:'GET'})
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
-  ];
-  var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
+      const result = await response.json();
+      // console.log("Result:", result);
+
+      // Check if the status is "ok" before updating the state
+      if (result.status === "ok") {
+        setRecentCamps(result.data);
+      } else {
+          console.error('Unexpected response format:', result);
+      }
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    // console.log("inside useeffect")
+    recent()
+  })
+
 
   return (
     <section className="home" id="home">
@@ -48,15 +47,17 @@ const Home = () => {
       <h1 className="latest_campaign_title">Recent Campaigns</h1>
       <div className="campaign_cover">
         {/* <Slider {...settings}> */}
-        {campaign.map((camp) => {
+        {recentCamps.map((camp) => {
           return (
+            <Link to={`/Campaign/${camp.campaignId}`} key={camp.campaignId}>
             <div className="latest_campaign">
-              <p>{camp.title}</p>
-              <p>Location: {camp.Location}</p>
-              <p>Occasion: {camp.occasion}</p>
-              <p>Books Sold: {camp.books_sold}</p>
-              <button className="repo_btn">Report</button>
+              <p>{camp.campaignName}</p>
+              <p>{camp.campagnId}</p>
+              <p>Location: {camp.location}</p>
+
+              <button className="repo_btn">Read More</button>
             </div>
+            </Link>
           );
         })}
         {/* </Slider> */}

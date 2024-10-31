@@ -17,7 +17,7 @@ const IndividuaPost = () => {
   const [error, setError] = useState("");
   const [campEnded,setCampEnded]=useState(false)
   const { campaignId } = useParams();
-
+  const [newPurchase,setNewPurchase] = useState([])
   const [customer,setCustomer]=useState([])
   const [purchase,setPurchase]=useState([])
 
@@ -138,9 +138,9 @@ const IndividuaPost = () => {
   return (
     <div className="individual_post_container">
       <div className="individual_btn">
-        <button className="end_camp" onClick={handleEndCamp}>
+        {/* <button className="end_camp" onClick={handleEndCamp}>
           End Campaign
-        </button>
+        </button> */}
         <button className="camp_btn inventory" onClick={handleInventory}>
           Inventory
         </button>
@@ -159,6 +159,9 @@ const IndividuaPost = () => {
           inventory={inventory}
           sales={sales}
           setSales={setSales}
+          newPurchase={newPurchase}
+          purchase={purchase}
+          setNewPurchase={setNewPurchase}
         />
       )}
       {individualPage == "customers" && (
@@ -170,6 +173,8 @@ const IndividuaPost = () => {
           grandTotal={grandTotal}
           purchase={purchase}
           customer={customer}
+          newPurchase={newPurchase}
+          setNewPurchase={setNewPurchase}
         />
       )}
       {individualPage == "orderDetails" && (

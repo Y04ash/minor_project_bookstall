@@ -3,10 +3,10 @@ import React,{useState,useEffect} from "react";
 import "../css/individualPostContainer.css";
 import { useParams } from "react-router-dom";
 import DataTable from "react-data-table-component";
-const Customers = ({ orderColumns, inventory, sales,customer,purchase }) => {
+const Customers = ({ orderColumns, inventory, sales,customer,purchase,newPurchase,setNewPurchase }) => {
   const { campaignId } = useParams();
   const [newCustomer, setNewCustomer] = useState([])
-  const [newPurchase,setNewPurchase] = useState([])
+  
   const parsedCampaignId = Number(campaignId);
   useEffect(() => {
     const campaignPurchases = purchase.filter((p) =>  p.campaignId === parsedCampaignId );
