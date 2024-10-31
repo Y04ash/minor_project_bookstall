@@ -19,6 +19,24 @@ app.listen(port,()=>{
     console. log(`app is running on ${port}`)
 })
 
+
+// get req from  / 
+// to get recent camp details
+
+app.get('/',async (req,res)=>{
+    try {
+        console.log("start of res")
+        const allData = await campaignTable.find({}).sort({ createdAt: -1 }) // Sort by `createdAt` field in descending order
+        .limit(3);
+        res.json({status:"ok",data:allData})
+        console.log("res send")
+    } catch (error) {
+        res.send(error)
+        console.log(error)
+    }
+})
+
+
 // get req on add-campaign
 // to get the books data from database
 app.get('/Add-campaign', async(req,res)=>{
@@ -73,7 +91,7 @@ app.get("/Campaign", async(req,res)=>{
     
     try {
         console.log("start of res")
-        const allData = await campaignTable.find({})
+        const allData = await campaignTable.find({}).sort({ createdAt: -1 })
         res.json({status:"ok",data:allData})
         console.log("res send")
     } catch (error) {
